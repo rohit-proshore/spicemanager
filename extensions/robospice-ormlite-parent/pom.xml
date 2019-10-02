@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Sonatype config to publish on Maven Central -->
+	<parent>
+		<groupId>com.octo.android.robospice</groupId>
+		<artifactId>robospice-parent</artifactId>
+		<relativePath>../../</relativePath>
+		<version>1.4.14</version>
+	</parent>
+
+	<artifactId>robospice-ormlite-parent</artifactId>
+	<packaging>pom</packaging>
+	<name>Robospice - Extension ORMLite Module Parent</name>
+	<description>RoboSpice ORMLite module parent</description>
+
+	<modules>
+		<!-- library -->
+		<module>robospice-ormlite</module>
+		<!-- test app -->
+		<module>robospice-ormlite-test</module>
+	</modules>
+
+	<properties>
+		<ormlite.version>4.48</ormlite.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.octo.android.robospice</groupId>
+				<artifactId>robospice-cache</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.j256.ormlite</groupId>
+				<artifactId>ormlite-core</artifactId>
+				<version>${ormlite.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.j256.ormlite</groupId>
+				<artifactId>ormlite-android</artifactId>
+				<version>${ormlite.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
