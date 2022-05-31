@@ -15,7 +15,7 @@
 		<robospice.ormlite.version>1.4.9</robospice.ormlite.version>
 		<robospice.spring.android.version>1.4.9</robospice.spring.android.version>
 		<spring.android.version>1.0.1.RELEASE</spring.android.version>
-		<simplexmlserializer.version>2.7</simplexmlserializer.version>
+		<simplexmlserializer.version>2.7.1</simplexmlserializer.version>
 		<commons.logging.version>1.1.3</commons.logging.version>
 		<android-maven-plugin.version>3.7.0</android-maven-plugin.version>
 		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
